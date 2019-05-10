@@ -30,10 +30,10 @@ require_once ( ROOT . '/library/vendor/speech_to_text/index.php');
 // for vendor scripts that are html/css/js related, they would be included in the views/template files
 
 
-// Provider Scripts
-require_once ( ROOT . '/public/@providers/greeting.php');
+// Providers
+// require_once ( ROOT . '/public/@providers/greeting.php');
 
-// Template Scripts
+// Templates
 require_once ( ROOT . '/public/@templates/templates.php');
 
 

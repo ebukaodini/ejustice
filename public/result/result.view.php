@@ -11,12 +11,32 @@
 <!-- Web Content Start Here -->
 <body>
    <header class="text-center sticky-top m-5">
-      <h1 >eJustice</h1>
+      <h1 class="bg-dark p-2 text-light">
+         <a href="#" class="float-left btn btn-info text-light" onclick="goBack()">
+            <span class="fa fa-md fa-arrow-left"></span>
+         </a>
+         <span class="text-info">e</span>Justice
+      </h1>
    </header>
 
-   <main>
+   <main class="container">
 
-      <center><a class="btn btn-lg btn-success m-5 text-light" href="<?=search?>"> START &gt;&gt; </span> </a></center>
+      <h3 class="text-info">Search Result(s)</h3> <hr>
+      
+      <div class="table-responsive">
+         <table class="table table-sm table-bordered table-striped">
+            <tr>
+               <th>#</th>
+               <th>Badge No.</th>
+               <th>Name</th>
+               <th>Voice Notes</th>
+               <th>View more</th>
+            </tr>
+
+            <?=$result->resultView?>
+            
+         </table>
+      </div>
 
    </main>
 

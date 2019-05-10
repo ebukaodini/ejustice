@@ -1,7 +1,7 @@
 <?php
 /**
  * Summary:
- * 
+ * This Class Logs and Show Error Messages
  */
 
 // a class to greet someone
@@ -17,7 +17,7 @@ class ErrorHandler
       $this->errorLog[] = $errorMsg;
    }
 
-   public function toString(){
+   public function __toString(){
       return implode(', ', $this->errorLog);
    }
 

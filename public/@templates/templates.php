@@ -40,9 +40,10 @@ HTML;
          <script src="../../library/vendor/jquery/https_ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.min.js"></script>
 
          <!-- Font Awesome -->
-         <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../library/vendor/fontawesome/https_cdnjs.cloudflare.com_ajax_libs_font-awesome_4.7.0_css_font-awesome.min.css" /> -->
+         <link rel="stylesheet" type="text/css" media="screen" href="../../library/vendor/fontawesome/webfont-css/css/fontawesome-all.css" />
 
-         <link rel="stylesheet" type="text/css" media="screen" href="../../library/vendor/fontawesome/webfont-css/css/fontawesome.css" />
+         <!-- Javascript -->
+         <script src="../@assets/js/main.js"></script>
 
       </head>
 HTML;
@@ -55,11 +56,37 @@ HTML;
       </html>
 
       <footer class="text-center m-5">
-         <h5>&copy; INIT</h5>
+         <h5>&reg; Powered by Init</h5>
       </footer>
 HTML;
 
       return $template;
+   }
+
+   public function renderResult(array $results){
+      $resultCount = count($results);
+      $template = "";
+
+      for ($i=0; $i < $resultCount; $i++) { 
+         $id = $i+1;
+         $badge = $results[$i]['officer_badge_no'];
+         $name = "-";
+         $tText = $results[$i]['translated_text'];
+         $action = "-";
+
+         $template .= <<<HTML
+         <tr>
+            <td>{$id}</td>
+            <td>{$badge}</td>
+            <td>{$name}</td>
+            <td>{$tText}</td>
+            <td>{$action}</td>
+         </tr>
+HTML;
+      }
+
+      return $template;
+
    }
 
 }

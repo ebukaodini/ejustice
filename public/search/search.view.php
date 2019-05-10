@@ -11,7 +11,12 @@
 <!-- Web Content Start Here -->
 <body>
    <header class="text-center sticky-top m-5">
-      <h1> <span class="text-info fa fa-bars"></span> <span class="text-info">e</span>Justice</h1>
+      <h1 class="bg-dark p-2 text-light">
+         <a href="#" class="float-left btn btn-info text-light" onclick="goBack()">
+            <span class="fa fa-md fa-arrow-left"></span>
+         </a>
+         <span class="text-info">e</span>Justice
+      </h1>
    </header>
 
    <main class="container ">
@@ -24,12 +29,30 @@
 
          <textarea name="_keyword" id="_keyword" placeholder="Seperate them with commas(,)" class="input form-control"></textarea>
 
-         <br>
-         <label for="_badgeNo" class="label font-weight-bold">Officer Badge Number</label>
+         <div class="row mt-4">
+            <div class="col-3">
+               <label for="_badgeNo" class="label font-weight-bold">Officer Badge Number</label>
+               <input name="_badgeNo" id="_badgeNo" placeholder="e.g PO1232" class="input form-control">
+            </div>
 
-         <input name="_keyword" id="_badgeNo" placeholder="e.g PO1232" class="input form-control">
+            <div class="col-3">
+               <label for="_startDate" class="label font-weight-bold">Start Date</label>
+               <input type="datetime" placeholder="2019-05-10 03:00:00" name="_startDate" id="_startDate" class="input form-control">
+            </div>
 
+            <div class="col-3">
+               <label for="_endDate" class="label font-weight-bold">End Date</label>
+               <input type="datetime" placeholder="2019-05-10 03:00:00" name="_endDate" id="_endDate" class="input form-control">
+            </div>
+
+            <div class="col-3">
+               <label for="_strict" class="label font-weight-bold">Strict Search</label>
+               <input type="checkbox" name="_strict" id="_strict" class="input custom-checkbox custom-control">
+            </div>
          
+         </div>
+        
+         <input type="submit" name="_search" value="Search" class="btn btn-info btn-md font-weight-bold mt-3">
 
          <!-- <input type="datetime" name="" id=""> -->
 
