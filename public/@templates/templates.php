@@ -66,13 +66,17 @@ HTML;
    public function renderResult(array $results){
       $resultCount = count($results);
       $template = "";
-
+      
       for ($i=0; $i < $resultCount; $i++) { 
          $id = $i+1;
          $badge = $results[$i]['officer_badge_no'];
          $name = "-";
          $tText = $results[$i]['translated_text'];
-         $action = "-";
+         $flag = $results[$i]['flag'];
+         $recordId = $results[$i]['id'];
+         $audioSrc = "<audio controls type='audio/wav' src='" . ROOT . "/" . $results[$i]['record_url'] . "'></audio>";
+
+         $resultPage = result;
 
          $template .= <<<HTML
          <tr>
@@ -80,13 +84,41 @@ HTML;
             <td>{$badge}</td>
             <td>{$name}</td>
             <td>{$tText}</td>
-            <td>{$action}</td>
+            <td>{$audioSrc}</td>
+            <td>{$flag}</td>
+            <td>
+               <form action="{$resultPage}" method="post">
+               <select name="_flags" id="_flags" value="{$flag}" class="">
+                  <option value="unverified">Unverified</option>
+                  <option value="pending">Pending</option>
+                  <option value="bad">Bad</option>
+                  <option value="okay">Okay</option>
+               </select>
+               <input type="hidden" name="_recordId" value="{$recordId}">
+               <input type="submit" value="Go" name="_updateFlag" class="btn btn-sm btn-info text-light">
+               </form>
+            </td>
          </tr>
 HTML;
       }
 
       return $template;
+   }
 
+   public function renderError($message){
+      $template = <<<HTML
+      <div class="bg-danger text-light p-1 mb-1 font-weight-bold text-center"> {$message} </div>
+HTML;
+
+      return $template;
+   }
+
+   public function renderSuccess($message){
+      $template = <<<HTML
+      <div class="bg-success text-light p-1 mb-1 font-weight-bold text-center"> {$message} </div>
+HTML;
+
+      return $template;
    }
 
 }

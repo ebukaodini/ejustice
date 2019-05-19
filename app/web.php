@@ -31,7 +31,9 @@ require_once ( ROOT . '/library/vendor/speech_to_text/index.php');
 
 
 // Providers
-// require_once ( ROOT . '/public/@providers/greeting.php');
+require_once ( ROOT . '/public/@providers/validate.php');
+require_once ( ROOT . '/public/@providers/officer.php');
+require_once ( ROOT . '/public/@providers/recording.php');
 
 // Templates
 require_once ( ROOT . '/public/@templates/templates.php');

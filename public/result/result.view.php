@@ -6,7 +6,7 @@
 ?>
 
 <!-- Template Header -->
-<?= $templates->PageHeader(); ?>
+<?= $templates->PageHeader("eJustice | Result"); ?>
 
 <!-- Web Content Start Here -->
 <body>
@@ -22,15 +22,19 @@
    <main class="container">
 
       <h3 class="text-info">Search Result(s)</h3> <hr>
-      
+
+      <?= $result->errorLog?>
+
       <div class="table-responsive">
          <table class="table table-sm table-bordered table-striped">
             <tr>
                <th>#</th>
                <th>Badge No.</th>
                <th>Name</th>
-               <th>Voice Notes</th>
-               <th>View more</th>
+               <th>Texts</th>
+               <th>Listen</th>
+               <th>Status</th>
+               <th>Action</th>
             </tr>
 
             <?=$result->resultView?>

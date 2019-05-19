@@ -25,12 +25,23 @@
 
       <form action="<?=result?>" method="post" class="">
 
-         <label for="_keyword" class="label font-weight-bold">Keywords</label>
+         <div class="row">
+            <div class="col-12">
+               <label for="_keyword" class="label font-weight-bold">Keywords</label>
 
-         <textarea name="_keyword" id="_keyword" placeholder="Seperate them with commas(,)" class="input form-control"></textarea>
+               <textarea name="_keyword" id="_keyword" placeholder="Seperate them with commas(,)" class="input form-control"></textarea>
+            </div>
 
+            <!-- <div class="col-2 mt-4">
+               <input type="button" value="Save Keywords" class="btn btn-sm btn-info m-1"><br>
+               <input type="button" value="Load Keywords" class="btn btn-sm btn-info m-1">
+            </div> -->
+            
+
+         </div>
+         
          <div class="row mt-4">
-            <div class="col-3">
+            <div class="col-4">
                <label for="_badgeNo" class="label font-weight-bold">Officer Badge Number</label>
                <input name="_badgeNo" id="_badgeNo" placeholder="e.g PO1232" class="input form-control">
             </div>
@@ -45,7 +56,7 @@
                <input type="datetime" placeholder="2019-05-10 03:00:00" name="_endDate" id="_endDate" class="input form-control">
             </div>
 
-            <div class="col-3">
+            <div class="col-2">
                <label for="_strict" class="label font-weight-bold">Strict Search</label>
                <input type="checkbox" name="_strict" id="_strict" class="input custom-checkbox custom-control">
             </div>
