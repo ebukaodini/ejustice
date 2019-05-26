@@ -18,10 +18,11 @@ ini_set('upload_tmp_dir', 'C:\xampp\tmp');
 
 // Database Config
 // Database 1
-define('db1_host', 'localhost');
-define('db1_user', 'root');
-define('db1_password', '');
-define('db1_database', 'ejustice_db');
+define('db1_host', 'ec2-54-197-239-115.compute-1.amazonaws.com');
+define('db1_user', 'laofknfftcvgmk');
+define('db1_password', '8aef2828eff5930c4c1cfa043461adfae4329b6f4e1e49da8eb3c8e6497f4aa1');
+define('db1_database', 'da5uusl0dingnp');
+define('db1_port', '5432');
 
 // Controllers - Pages
 // url shortener for web-pages
