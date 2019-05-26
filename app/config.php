@@ -13,6 +13,7 @@ ini_set('date.timezone', 'Africa/Lagos');
 ini_set('max_file_uploads', '20');
 ini_set('upload_max_filesize', '2M');
 ini_set('upload_tmp_dir', 'C:\xampp\tmp');
+// ini_set('display_errors', '0');
 
 
 // Database Config

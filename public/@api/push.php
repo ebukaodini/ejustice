@@ -16,16 +16,19 @@ if ($upload) {
 
    // get the other values
    $officer_badge_no = isset($_REQUEST['officer_badge_no']) && (trim($_REQUEST['officer_badge_no']) != null) ? $_REQUEST['officer_badge_no'] : null ;
-   $translated_text = isset($_REQUEST['translated_text']) && (trim($_REQUEST['translated_text']) != null) ? $_REQUEST['translated_text'] : null ;
+   // $translated_text = isset($_REQUEST['translated_text']) && (trim($_REQUEST['translated_text']) != null) ? $_REQUEST['translated_text'] : null ;
    $start_time = isset($_REQUEST['start_time']) && (trim($_REQUEST['start_time']) != null) ? $_REQUEST['start_time'] : null ;
    $end_time = isset($_REQUEST['end_time']) && (trim($_REQUEST['end_time']) != null) ? $_REQUEST['end_time'] : null ;
    $flag = 'unverified';
+   $translated_text = null;
    $url = null; // the url would be assigned later in the class implicitly
 
-   $record = new Records($url, $officer_badge_no, $translated_text, $start_time, $end_time, $flag);
-   $record = json_decode($record, true);
+   $record = new Records();
    
-   if ($record['flag'] == "error") {
+   $init = $record->init($url, $officer_badge_no, $translated_text, $start_time, $end_time, $flag);
+   $init = json_decode($init, true);
+   
+   if ($init['flag'] == "error") {
       exit(json_encode($record));
    }
 

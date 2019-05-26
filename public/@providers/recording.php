@@ -13,8 +13,12 @@ class Records extends RecordingModel
    private $endTime;
    private $flag;
    
-   public function __construct(string $url = null, string $badgeNo = null, string $translatedText = null, string $startTime = null, string $endTime = null, string $flag = null)
-   {
+   public function __construct(){
+      # Create an instance of the Google Cloud Speech-To-Text
+      $this->sTT = new SpeechToText();
+   }
+
+   public function init(string $url = null, string $badgeNo = null, string $translatedText = null, string $startTime = null, string $endTime = null, string $flag = null){
       // validate inputs
       $validator = new Validate();
 
@@ -57,6 +61,13 @@ class Records extends RecordingModel
 
    public function addRecordings()
    {
+      # Transcipt the audio files to text
+      $text = (new SpeechToText())
+         ->transcript($this->url);
+      
+      # Use translated text or Default
+      $this->translatedText = (isset($text) && trim($text) != "") ? $text : "No Translated text" ;
+      
       if ($this->badgeNo != null && $this->translatedText != null && $this->startTime != null && $this->endTime != null && $this->flag != null && $this->url != null) {
          $add = parent::create(array(
             "officer_badge_no" => $this->badgeNo,
@@ -75,7 +86,7 @@ class Records extends RecordingModel
 
    public function uploadRecording()
    {
-      if(isset($_FILES['recording']) && isset($_REQUEST['recording']) && (trim($_REQUEST['recording']) != null) ){
+      if(isset($_FILES['recording']) && isset($_FILES['recording']['name']) && (trim($_FILES['recording']['name']) != null) ){
    
          $newfilename = "eJ_".date("YmdHis"); // the new generated name for the file
          $target_dir = "../../uploads/"; // the application's directory for images

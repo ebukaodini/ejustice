@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ejustice",
+  "private_key_id": "b5b8f7c579aef2b4baaa7dcf018b3cf351711d57",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9qBkTSg9SAI8p\n3zZxj7EH+ygi9pZepdHku0FpzzA6gMJs+yLyMH3xGFY+S13RUaCiVT9J4AVgnr3d\ntZKvPQPcJVEmfp8d1sRTWMRwfFRlOG5U0WK7VO6xUffQtgyP6WxduI1UqeGLDcaz\n3U6f0aQwS+kw0xqtGJxyA576jXaTesJ3MmXsTFIerlfRaWXK8Ev8rsHDNhkfi6qd\n9UjU7cWN1bhzAXaGqTH7gm/d/Zb8KdNTjFArgIBh8DrmMwonw01bk0YlWuQxgavY\nnFSYS+2cNptQaMrRwzk9X5Di1Fc6anDBEcR04yafRAN5UoQ2YdT09ARkrZdblMcz\nPoaDPWbzAgMBAAECggEAOirIJgZc1IWfYvQ2unWbkhsRoEeIrtaknUZhNZZ58Dd1\naf9MJIOC3OLd8JUk3QHwBlmm4311qMCG8uyxZFWOTYKUdP34xyoLZJShCu7W44R/\nMjxVz6ao3nGJU9XB3JF2zve/QOwpZICBJMEHUDT36mgdyP+1+sjFkqJRq/6fE3PW\np16SR1m8XfLpPDz03kuwgJFXx7p7B4iUHxBoW3s2tKHlnvwSDwPQBkDWr/JcaqHk\nZLT4vXaTRMNmyvQg6lT7Amdp0ZEDAZMGJmIbQBhaZU42oN0bY2yemA7IlJX8ir83\nzEELUakeWpRjdnAwWoV/GsI49vc+4O8rY2l8ttTjAQKBgQD83Bmt6cESCs/a9Q58\nwFuRwGdOd4bGI3rD+244PjAH9BduRvQJ3KHTdorHbOrlmmyhOuOcPF2Qc7TR19ik\n7ckBG1Y6EngFEqq7/LpHbSwfaiKm3OyKX0RZBhjBNFnf55z7SxZjv1Mzm6UXJ+IS\nV70lYSdNX7eN6R60CBInkvAU0wKBgQDAAw9s/nfYAByMqiVnWBzRT3ZDwAPbsjNL\nGn86Aj28/b3AZ6MJllcPUvqm2jXxQSfWKG9E5LOPwRyLDrk0zBCLOiUmp5xBDieW\nOm8mJ5AotElLoVbn2L4fyXjU1caDVlIjjC7wmF12WtrpH56DxJYyWcGPubZU8hqf\nvqYT116RYQKBgDbEqZ88uT/iLaE8YPXuaCcKqJWbWArElouqgvYVqiue2BBft+4G\n5to5m9eUJNC0gQDvE2u8u3tVRH4LJXabtmTR+fw8EdjvcSGknOhpohvvzi+cPHPA\nLLqnkmcOosTXku3vFptmTmwoMzrvvYzBikt1XqDosYZATxEpil0d+3hXAoGBAJEj\nPwvCJdCN9QaWrgM55T6J8/kuMTxlrMP+WWD9xLEQk9fV/rUGgPRCYtiwZMnh2DzW\n/5Rx0xC8hdjO3kv8XB0BbIeVdlTuYBn8PXv3t84syKJ0Z/6EJOJeJgmrNYydOSVJ\nl0mhwjPuZT6F+gncFTQmCFudoyb+ggVx1JN23jLBAoGBAN90D5XeO9L3gYrYPnbb\neWdc/tQftAgOz96LEM6S+IWB+tbHBj+xlMn5bcS2ibX7FPFLqNbVCp7dlEkjeYOh\ny8JldJrUULf1Js+4X4DEq6DV+CDnju7JDgXjtgzEeybp+A8aMSUHX6deIF/q5Ebk\nqnxEC21BeAsypoEjshblb8R1\n-----END PRIVATE KEY-----\n",
+  "client_email": "ejustice@ejustice.iam.gserviceaccount.com",
+  "client_id": "101947053062808137100",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ejustice%40ejustice.iam.gserviceaccount.com"
+}

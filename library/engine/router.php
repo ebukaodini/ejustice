@@ -9,7 +9,7 @@ class Router
    public function __construct(){
    }
 
-   public function goto($route, $params = null ){
+   public function gotoRoute($route, $params = null ){
       $params = isset($params) ? "?" . $params : "";
       header("Location: {$route}" . $params);
    }
