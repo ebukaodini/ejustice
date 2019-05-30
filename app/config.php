@@ -18,10 +18,10 @@ ini_set('upload_tmp_dir', 'C:\xampp\tmp');
 
 // Database Config
 // Database 1
-define('db1_host', 'ec2-54-197-239-115.compute-1.amazonaws.com');
-define('db1_user', 'laofknfftcvgmk');
-define('db1_password', '8aef2828eff5930c4c1cfa043461adfae4329b6f4e1e49da8eb3c8e6497f4aa1');
-define('db1_database', 'da5uusl0dingnp');
+define('db1_host', 'ec2-50-19-114-27.compute-1.amazonaws.com');
+define('db1_user', 'algdntjqjphndc');
+define('db1_password', 'df634bbb4957accbdd7c9b1db1efaae914275a457986c75a88fdb0bd5a730cb7');
+define('db1_database', 'dbnci9ecn382kq');
 define('db1_port', '5432');
 
 // Controllers - Pages
