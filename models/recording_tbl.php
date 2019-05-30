@@ -20,11 +20,7 @@ class RecordingModel
       $this->error = new ErrorHandler();
       
       // Create connection
-      $db = parse_url("postgres://algdntjqjphndc:df634bbb4957accbdd7c9b1db1efaae914275a457986c75a88fdb0bd5a730cb7@ec2-50-19-114-27.compute-1.amazonaws.com:5432/dbnci9ecn382kq");
-      $db["path"] = ltrim($db["path"], "/");
-      $this->conn = pg_connect("postgres://algdntjqjphndc:df634bbb4957accbdd7c9b1db1efaae914275a457986c75a88fdb0bd5a730cb7@ec2-50-19-114-27.compute-1.amazonaws.com:5432/dbnci9ecn382kq");
-      
-//       $this->conn = mysqli_connect(db1_host, db1_user, db1_password, db1_database);
+      $this->conn = mysqli_connect(db1_host, db1_user, db1_password, db1_database);
       
       // Check connection
       if (!$this->conn) {
