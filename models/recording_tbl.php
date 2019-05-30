@@ -21,7 +21,7 @@ class RecordingModel
       
       // Create connection
 //       $this->conn = mysqli_connect(db1_host, db1_port, db1_user, db1_password, db1_database);
-         $this->conn = pg_connect("host=".db1_host." port=".db1_port." dbname=".db1_database." user=".db1_user." password=".db1_password."")
+         $this->conn = pg_connect("host=".db1_host." port=".db1_port." dbname=".db1_database." user=".db1_user." password=".db1_password."");
       
       // Check connection
       if (!$this->conn) {
