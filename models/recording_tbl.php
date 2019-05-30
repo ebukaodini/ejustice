@@ -89,7 +89,7 @@ class RecordingModel
 
       if ($result) {
 
-         $affected = pg_affected_rows($this->conn);
+         $affected = 1;//pg_affected_rows($this->conn);
 
          return $affected;
 
