@@ -20,11 +20,12 @@ class RecordingModel
       $this->error = new ErrorHandler();
       
       // Create connection
-      $this->conn = mysqli_connect(db1_host, db1_user, db1_password, db1_database);
+//       $this->conn = mysqli_connect(db1_host, db1_port, db1_user, db1_password, db1_database);
+         $this->conn = pg_connect("host=db1_host port=db1_port dbname=db1_database user=db1_user password=db1_password")
       
       // Check connection
       if (!$this->conn) {
-         $this->error->add("ErrorHandler: " . mysqli_connect_error());
+         $this->error->add("ErrorHandler: " . pg_last_error());
       }
 
    }
@@ -35,7 +36,7 @@ class RecordingModel
    }
 
    public function lastId(){
-      return mysqli_insert_id($this->conn);
+      return pg_result_status($this->conn, PGSQL_STATUS_LONG);
    }
 
    public function create($inputs){
@@ -45,12 +46,12 @@ class RecordingModel
       $query = "INSERT INTO recording_tbl ({$fields}) 
       VALUE ({$bindValues})";
       
-      $result = mysqli_query($this->conn, $query);
+      $result = pg_query($this->conn, $query);
 
       if ($result) {
          return true;
       } else {
-         $this->error->add("ErrorHandler: " . mysqli_error($this->conn));
+         $this->error->add("ErrorHandler: " . pg_last_error($this->conn));
          return false;
       }
 
@@ -62,11 +63,11 @@ class RecordingModel
 
       $query = "SELECT {$fields} FROM recording_tbl {$queryConditions}";
       
-      $result = mysqli_query($this->conn, $query);
+      $result = pg_query($this->conn, $query);
 
-      if (mysqli_num_rows($result) > 0) {
+      if (pg_num_rows($result) > 0) {
 
-         $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+         $result = pg_fetch_all($result, PGSQL_ASSOC);
 
          return $result;
 
@@ -84,11 +85,11 @@ class RecordingModel
 
       $query = "UPDATE recording_tbl SET {$sets} {$queryConditions}";
 
-      $result = mysqli_query($this->conn, $query);
+      $result = pg_query($this->conn, $query);
 
       if ($result) {
 
-         $affected = mysqli_affected_rows($this->conn);
+         $affected = pg_affected_rows($this->conn);
 
          return $affected;
 
@@ -105,7 +106,7 @@ class RecordingModel
 
       $query = "DELETE FROM recording_tbl {$queryConditions}";
       
-      $result = mysqli_query($this->conn, $query);
+      $result = pg_query($this->conn, $query);
 
       if ($result === TRUE) {
          return true;
