@@ -6,7 +6,7 @@
 ?>
 
 <!-- Template Header -->
-<?= $templates->PageHeader("eJustice | Result"); ?>
+<?= $templates->PageHeader("Result | eJustice"); ?>
 
 <!-- Web Content Start Here -->
 <body>

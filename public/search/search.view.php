@@ -6,7 +6,7 @@
 ?>
 
 <!-- Template Header -->
-<?= $templates->PageHeader(); ?>
+<?= $templates->PageHeader("Search | eJustice"); ?>
 
 <!-- Web Content Start Here -->
 <body>
@@ -29,7 +29,7 @@
             <div class="col-12">
                <label for="_keyword" class="label font-weight-bold">Keywords</label>
 
-               <textarea name="_keyword" id="_keyword" placeholder="Seperate them with commas(,)" class="input form-control"></textarea>
+               <textarea name="_keyword" id="_keyword" disabled placeholder="Seperate them with commas(,)" class="input form-control"></textarea>
             </div>
 
             <!-- <div class="col-2 mt-4">
@@ -43,28 +43,35 @@
          <div class="row mt-4">
             <div class="col-4">
                <label for="_badgeNo" class="label font-weight-bold">Officer Badge Number</label>
-               <input name="_badgeNo" id="_badgeNo" placeholder="e.g PO1232" class="input form-control">
+               <input name="_badgeNo" disabled id="_badgeNo" value="PO001" placeholder="e.g PO1232" class="input form-control">
             </div>
 
             <div class="col-3">
                <label for="_startDate" class="label font-weight-bold">Start Date</label>
-               <input type="datetime" placeholder="2019-05-10 03:00:00" name="_startDate" id="_startDate" class="input form-control">
+               <input type="datetime" disabled placeholder="2019-05-10 03:00:00" name="_startDate" id="_startDate" class="input form-control">
             </div>
 
             <div class="col-3">
                <label for="_endDate" class="label font-weight-bold">End Date</label>
-               <input type="datetime" placeholder="2019-05-10 03:00:00" name="_endDate" id="_endDate" class="input form-control">
+               <input type="datetime" disabled placeholder="2019-05-10 03:00:00" name="_endDate" id="_endDate" class="input form-control">
             </div>
 
             <div class="col-2">
                <label for="_strict" class="label font-weight-bold">Strict Search</label>
-               <input type="checkbox" name="_strict" id="_strict" class="input custom-checkbox custom-control">
+               <input type="checkbox" disabled name="_strict" id="_strict" class="input custom-checkbox custom-control">
             </div>
          
          </div>
         
          <input type="submit" name="_search" value="Search" class="btn btn-info btn-md font-weight-bold mt-3">
-
+         <!-- <span style="font-size:20px;" class="font-italic font-weight-bold">
+            <span class="fa fa-chevron-left fa-chevron-left fa-chevron-left"></span>
+            <span class="fa fa-chevron-left fa-chevron-left fa-chevron-left"></span>
+            <span class="fa fa-chevron-left fa-chevron-left fa-chevron-left"></span>
+            <span>Click Here</span>
+         </span> -->
+         
+         <!-- </span><span class="fa fa-chevron-left"></span><span class="fa fa-chevron-left"></span> -->
          <!-- <input type="datetime" name="" id=""> -->
 
       </form>
