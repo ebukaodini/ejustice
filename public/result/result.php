@@ -107,7 +107,7 @@ final class Result
 
                $this->resultView = $this->templates->renderResult($results);
             }else {
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -123,7 +123,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -139,7 +139,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -155,7 +155,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -170,7 +170,7 @@ final class Result
 
                $this->resultView = $this->templates->renderResult($results);
             }else {
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -188,7 +188,7 @@ final class Result
 
                $this->resultView = $this->templates->renderResult($results);
             }else {
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -204,7 +204,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -219,7 +219,7 @@ final class Result
 
                $this->resultView = $this->templates->renderResult($results);
             }else {
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -235,7 +235,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
@@ -251,7 +251,7 @@ final class Result
                $this->resultView = $this->templates->renderResult($results);
             }else {
                
-               $this->errorLog = $this->templates->renderError("Invalid Search");
+               $this->errorLog = $this->templates->renderError("No Result Found");
             }
 
          }
