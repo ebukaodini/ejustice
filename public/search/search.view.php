@@ -43,7 +43,7 @@
          <div class="row mt-4">
             <div class="col-4">
                <label for="_badgeNo" class="label font-weight-bold">Officer Badge Number</label>
-               <input name="_badgeNo" disabled id="_badgeNo" value="PO001" placeholder="e.g PO1232" class="input form-control">
+               <input name="_badgeNo" id="_badgeNo" value="PO001" placeholder="e.g PO1232" class="input form-control">
             </div>
 
             <div class="col-3">
